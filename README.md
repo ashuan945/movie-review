@@ -3,7 +3,7 @@
 A full-stack Movie Review web application built using the **MERN stack**.
 Users can browse movies, read reviews, and submit their own reviews.
 
----
+
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ Users can browse movies, read reviews, and submit their own reviews.
 ✅ RESTful API integration
 ✅ Responsive UI using React & Bootstrap
 
----
+
 
 ## 🛠 Tech Stack
 
@@ -36,7 +36,7 @@ Users can browse movies, read reviews, and submit their own reviews.
 
 * MongoDB Atlas / Local MongoDB
 
----
+
 
 ## 📁 Project Structure
 
@@ -60,7 +60,7 @@ movie-review-app/
 └── README.md
 ```
 
----
+
 
 ## ⚙️ Installation & Setup
 
@@ -71,7 +71,7 @@ git clone https://github.com/ashuan945/movie-review.git
 cd movie-review
 ```
 
----
+
 
 ### 2️⃣ Setup Backend
 
@@ -94,7 +94,7 @@ Run backend:
 node index.js
 ```
 
----
+
 
 ### 3️⃣ Setup Frontend
 
@@ -118,7 +118,7 @@ Backend runs on:
 http://localhost:5000
 ```
 
----
+
 
 ## 🔌 API Endpoints
 
@@ -130,19 +130,4 @@ http://localhost:5000
 | PUT    | /api/v1/reviews/ | Update review     |
 | DELETE | /api/v1/reviews/ | Delete review     |
 
----
-
-## 🔐 Environment Variables
-
-Create a `.env` file in the backend folder.
-
-Example:
-
-```
-MONGO_URI=your_connection_string
-MOVIEREVIEWS_NS=sample_mflix  
-PORT=5000
-```
-
-⚠️ Do NOT commit `.env` to GitHub.
 
