@@ -122,12 +122,32 @@ http://localhost:5000
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint         | Description       |
-| ------ | ---------------- | ----------------- |
-| GET    | /api/v1/movies   | Get all movies    |
-| GET    | /api/v1/movies/  | Get movie details |
-| POST   | /api/v1/reviews  | Add review        |
-| PUT    | /api/v1/reviews/ | Update review     |
-| DELETE | /api/v1/reviews/ | Delete review     |
+| Method | Endpoint | Description |
+|--------|----------|------------|
+| GET | /api/v1/movies?page= | Get all movies (with pagination) |
+| GET | /api/v1/movies/id/:id | Get movie details by ID |
+| GET | /api/v1/movies?title= | Search movies by title |
+| POST | /api/v1/movies/review | Add a new review |
+| PUT | /api/v1/movies/review | Update a review |
+| DELETE | /api/v1/movies/review | Delete a review |
+| GET | /api/v1/movies/ratings | Get available movie ratings |
 
+
+
+## 📸 Screenshots
+
+### 🔑 Login
+<img alt="image" src="https://github.com/user-attachments/assets/c4ce2529-d5d2-41cc-9528-a33618ab4829" width="600" />
+
+### 🎬 Home Page / Movie List
+<img alt="image" src="https://github.com/user-attachments/assets/b2af8861-1cdf-47f3-ae37-c825a2d12458" width="600" />
+
+### 🔍 Movie Search
+<img alt="image" src="https://github.com/user-attachments/assets/a222a192-fcb4-4a80-bbe5-ec9d1af51f90" width="600" />
+
+### 🎥 Movie Details & Reviews
+<img alt="image" src="https://github.com/user-attachments/assets/1df853ed-ac7b-40ee-b690-88543cd4a31c" width="600" />
+
+### ✍️ Add Review
+<img alt="image" src="https://github.com/user-attachments/assets/4718ba10-6dfd-4fdf-8ba0-ca90436738c8" width="600" />
 
