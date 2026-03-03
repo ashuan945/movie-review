@@ -37,15 +37,15 @@ const Movie = props => {
     }, [id])
 
     // Function to delete a review
-    const deleteReview = (reviewId, index) => {
+    const deleteReview = (reviewId) => {
         MovieDataService.deleteReview(reviewId, props.user.email)
             .then(() => {
-                // Remove the review from local state without refreshing page
-                setMovie(prev => {
-                    const newReviews = [...prev.reviews] // clone current reviews
-                    newReviews.splice(index, 1)  // remove the deleted review
-                    return { ...prev, reviews: newReviews } // update state
-                })
+                setMovie(prev => ({
+                    ...prev,
+                    reviews: prev.reviews.filter(
+                        review => review._id !== reviewId
+                    )
+                }))
             })
             .catch(e => {
                 console.log(e)
@@ -105,7 +105,7 @@ const Movie = props => {
                             return 0; // keep others in the same order
                         })
                         .map((review, index) => (
-                            <ListGroup.Item key={index} className="mb-2 shadow-sm rounded">
+                            <ListGroup.Item key={review._id} className="mb-2 shadow-sm rounded">
 
                                 {/* Review content */}
                                 <div className="d-flex justify-content-between align-items-start mb-2">
@@ -115,7 +115,7 @@ const Movie = props => {
 
                                 <p>{review.text}</p>
 
-                                 {/* Edit/Delete buttons for review owner */}
+                                {/* Edit/Delete buttons for review owner */}
                                 {props.user && props.user.email === review.email && (
                                     <div className="d-flex gap-2">
                                         {/* Edit buttons if review belongs to current user */}
